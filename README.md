@@ -1,5 +1,7 @@
 # Implementación en Java de cuatro algoritmos para calcular el número de puntos de curvas elípticas definidas sobre cuerpos primos
 
+**Autora:** Laura Llorente Martínez
+
 Este repositorio contiene el código desarrollado como parte de mi Trabajo de Fin de Grado (TFG) de Matemáticas titulado **«Estudio y comparación de algoritmos para calcular el cardinal de curvas elípticas definidas sobre cuerpos primos»**. 
 
 Todo el código se ha implementado nativamente en el lenguaje **Java**, prescindiendo del uso de librerías externas para facilitar el análisis del comportamiento y flujo completo de los algoritmos.
