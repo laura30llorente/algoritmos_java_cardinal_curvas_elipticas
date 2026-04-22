@@ -38,7 +38,7 @@ Una vez que el usuario selecciona una opción, se ejecuta la implementación del
   <img width="600" height="538" alt="image" src="https://github.com/user-attachments/assets/526a001a-daf3-4652-89d6-7f96a5bbe599" />
 </p> 
 
-**Nota:** en los algoritmos del conteo exhaustivo y del símbolo de Legendre, es posible imprimir por consola los primeros puntos de la curva encontrados. Para habilitar esta opción, basta con cambiar el valor de la variable `MODO_DEBUG` a `true` al comienzo de los respectivos archivos (`ConteoExhaustivoPuntos.java` y `MetodoLegendre.java`).
+**Nota:** en los algoritmos del conteo exhaustivo y del símbolo de Legendre, es posible imprimir por consola los primeros puntos de la curva encontrados. Para habilitar esta opción, basta con cambiar el valor de la variable `MOSTRAR_PUNTOS` a `true` al comienzo de los respectivos archivos (`ConteoExhaustivoPuntos.java` y `MetodoLegendre.java`).
 
 ### 2. Análisis de rendimiento y estimación de tiempos (`PruebasMain.java`) 
 
