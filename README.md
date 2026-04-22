@@ -58,6 +58,23 @@ Para la implementación del algoritmo de Schoof, se han empleado los **polinomio
 
 Asimismo, dado que el algoritmo de Schoof trabaja con endomorfismos que se representan de la forma $(a(x),\ b(x) \ y)$, se optó por emplear **extensiones algebraicas** en las coordenadas de los endomorfismos para evitar problemas con la variable $y$ en las operaciones. Debido a esto, las operaciones de suma de puntos varían respecto a las de coordenadas afines. Por lo tanto, en la clase `OperacionesPuntoPolinomico.java` se definen las nuevas fórmulas [^2], así como la lógica de decisión para determinar la relación matemática entre los puntos $P$ y $Q$ [^3].
 
+Cabe destacar que la implementación desarrollada del algoritmo de Schoof es capaz de procesar adecuadamente curvas de estándares criptográficos. Por ejemplo, se realizaron pruebas con dos curvas del **estándar SEC 2 (Standards for Efficient Cryptography)**: `secp160r1` de $160$ bits y `secp256k1` de $256$ bits, utilizada en sistemas como Bitcoin y considerada segura en la práctica. En ambos casos, el algoritmo calculó el número de puntos de forma correcta.
+
+---
+
+## Estructura del proyecto
+
+El trabajo se ha dividido en varios paquetes, siguiendo las convenciones de nomenclatura para proyectos de Java en Eclipse. Toda la implementación se encuentra bajo un espacio común con el nombre base `com.utad.mais.tfgmaco`, que se localiza dentro de los directorios `TFG_MACO_CODIGO/src`:
+
+* **`algoritmos`:** contiene los distintos métodos para calcular el cardinal de curvas elípticas sobre cuerpos primos, cada uno conteniendo su lógica independiente.
+* **`curva`:** contiene una clase abstracta para establecer la base común de las curvas elípticas, y una clase concreta para las curvas en cuerpos finitos $\mathbb{F}_p$.
+* **`punto`:** contiene una clase abstracta para establecer la base común de los puntos, y una clase concreta para los puntos en cuerpos finitos $\mathbb{F}_p$.
+* **`operaciones`:** incluye clases que contienen métodos de operaciones fundamentales, como la suma de puntos y el algoritmo *double-and-add*, entre otros.
+* **`polinomios`:** se trata de un paquete que contiene clases muy específicas para el desarrollo del algoritmo de Schoof, como los polinomios de división o las extensiones de cuerpos.
+* **`utilidades`:** contiene clases de soporte como, por ejemplo, la clase encargada de mostrar la información de los algoritmos por consola.
+* **`main`:** punto de entrada de la aplicación. Se encarga de gestionar la interacción con el usuario y de delegar la ejecución al algoritmo seleccionado. Incluye una clase para cada uno de los dos modos de funcionamiento explicados.
+* **`pruebas`:** contiene clases para los tres primeros algoritmos, utilizadas para estimar su tiempo de ejecución en curvas de mayor tamaño (modo $2$).
+
 ---
 
 ## Tecnologías empleadas
